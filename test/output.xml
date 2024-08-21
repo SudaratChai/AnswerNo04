@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1rc1 (Python 3.7.3 on win32)" generated="20240821 09:58:41.274" rpa="false" schemaversion="4">
+<suite id="s1" name="TC001 Create to do lists without notifications successful" source="C:\PycharmProjects\AnswerNo04\TC001_Create_to_do_lists_without_notifications_successful.robot">
+<test id="s1-t1" name="Create to do lists without notifications successful" line="45">
+<kw name="Open Test Application">
+<arg>${REMOTE_URL}</arg>
+<arg>${PLATFORM_NAME}</arg>
+<arg>${DEVICE_TARGET}</arg>
+<arg>${DEVICE_NAME}</arg>
+<arg>${APP_PATH}</arg>
+<arg>${Automate_nmae}</arg>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${DEVICE_TARGET}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>app=${APP_PATH}</arg>
+<arg>automationName=${Automate_nmae}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20240821 09:58:41.571" endtime="20240821 09:58:52.994"/>
+</kw>
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>You don't have any todos</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20240821 09:58:53.437" level="INFO">Current page contains text 'You don't have any todos'.</msg>
+<status status="PASS" starttime="20240821 09:58:52.994" endtime="20240821 09:58:53.437"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240821 09:58:58.442" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240821 09:58:53.437" endtime="20240821 09:58:58.442"/>
+</kw>
+<status status="PASS" starttime="20240821 09:58:41.571" endtime="20240821 09:58:58.442"/>
+</kw>
+<kw name="Click button Add To Do">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>addToDoItemFAB</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240821 09:58:58.446" level="INFO">Clicking element 'addToDoItemFAB'.</msg>
+<status status="PASS" starttime="20240821 09:58:58.444" endtime="20240821 09:58:58.538"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240821 09:59:00.549" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240821 09:58:58.539" endtime="20240821 09:59:00.549"/>
+</kw>
+<status status="PASS" starttime="20240821 09:58:58.444" endtime="20240821 09:59:00.550"/>
+</kw>
+<kw name="Enter text To Do List">
+<arg>${TODOLIST}</arg>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>userToDoEditText</arg>
+<arg>${TODOLIST}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20240821 09:59:00.556" level="INFO">Typing text 'AddtodoList01' into text field 'userToDoEditText'</msg>
+<status status="PASS" starttime="20240821 09:59:00.552" endtime="20240821 09:59:00.763"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240821 09:59:02.765" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240821 09:59:00.763" endtime="20240821 09:59:02.765"/>
+</kw>
+<status status="PASS" starttime="20240821 09:59:00.551" endtime="20240821 09:59:02.765"/>
+</kw>
+<kw name="Click sent to do list">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>makeToDoFloatingActionButton</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20240821 09:59:02.771" level="INFO">Clicking element 'makeToDoFloatingActionButton'.</msg>
+<status status="PASS" starttime="20240821 09:59:02.767" endtime="20240821 09:59:02.824"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240821 09:59:04.829" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240821 09:59:02.824" endtime="20240821 09:59:04.829"/>
+</kw>
+<status status="PASS" starttime="20240821 09:59:02.766" endtime="20240821 09:59:04.829"/>
+</kw>
+<kw name="Verify To do list">
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>${TODOLIST}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20240821 09:59:04.927" level="INFO">Current page contains text 'AddtodoList01'.</msg>
+<status status="PASS" starttime="20240821 09:59:04.831" endtime="20240821 09:59:04.927"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240821 09:59:06.934" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240821 09:59:04.927" endtime="20240821 09:59:06.934"/>
+</kw>
+<status status="PASS" starttime="20240821 09:59:04.830" endtime="20240821 09:59:06.934"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20240821 09:59:06.934" endtime="20240821 09:59:07.230"/>
+</kw>
+<status status="PASS" starttime="20240821 09:58:41.570" endtime="20240821 09:59:07.231"/>
+</test>
+<status status="PASS" starttime="20240821 09:58:41.276" endtime="20240821 09:59:07.233"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC001 Create to do lists without notifications successful">TC001 Create to do lists without notifications successful</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
