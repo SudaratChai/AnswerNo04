@@ -56,7 +56,7 @@ Select to do list on screen
     Sleep  2s
 
 Select Slide to do list on screen
-    Swipe      0    220    100	0	1000
+    Swipe      0    230    100	0	1000
     Sleep  2s
 
 Clear Text to do
